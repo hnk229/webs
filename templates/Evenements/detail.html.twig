@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Detail
+{% endblock %}
+
+{% block body %}
+
+	<div class="container-md">
+		<div class="card mb-3">
+			<img src="{{ vich_uploader_asset(detail, 'imageFile') }}" class="card-img-top img-fluid" alt="..." style="height: 400px;" >
+			<div class="card-body">
+				<h5 class="card-title">{{detail.titre}}</h5>
+				<p class="card-text">{{ detail.description }}</p>
+                <p class="card-text">{{ detail.lieu }}</p>
+				<p class="card-text"> Invité d'honneur: {{ detail.invite }}</p>
+				<p class="card-text">
+					<small class="text-muted">Le {{detail.created_at|date('Y-m-d')}} à {{detail.created_at|date('H:i')}}</small>
+				</p>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock %}
