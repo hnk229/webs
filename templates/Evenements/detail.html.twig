@@ -16,6 +16,8 @@
 				<p class="card-text">
 					<small class="text-muted">Le {{detail.created_at|date('Y-m-d')}} à {{detail.created_at|date('H:i')}}</small>
 				</p>
+                <a href="{{path('app_evenement_detail', {'id': event.id})}}"
+						class="btn btn-primary">Participer</a>
 			</div>
 		</div>
 	</div>

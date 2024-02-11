@@ -20,14 +20,14 @@ class HomeController extends AbstractController
         ]);
     }
 
-    #[Route('/Evenements_passées',name: 'app_passe')]
+    #[Route('/Evenements_passées', name: 'app_passer')]
     public function passer(EvenementsRepository $passer): Response
     {
         $passers = $passer -> findAll();
 
         return $this -> render('Evenements/eventPasse.html.twig',[
             'controller_name' => 'HomeController',
-            'passer' => $passer,
+            'passer' => $passers,
         ]);
     }
 }
