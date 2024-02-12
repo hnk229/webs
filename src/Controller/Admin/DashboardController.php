@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Categories;
 use App\Entity\Evenements;
+use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -46,6 +47,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('Catégories', 'fas fa-card', Categories::class);
         yield MenuItem::linkToCrud('Evenements', 'fas fa-list', Evenements::class);
+        yield MenuItem::linkToCrud('Utilisateur', 'fas fa-users', User::class);
 
     }
 }
